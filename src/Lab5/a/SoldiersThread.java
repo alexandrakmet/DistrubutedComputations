@@ -47,7 +47,11 @@ public class SoldiersThread implements Runnable {
 
     private boolean isDone(Position[] soldiers) {
         for (int i = 0; i < soldiers.length - 1; i++) {
-            if (soldiers[i] != soldiers[i + 1]) return false;
+            Position left = soldiers[i];
+            Position right = soldiers[i+1];
+            if (left != right && left == Position.RIGHT) {
+               return false;
+            }
         }
         return true;
     }

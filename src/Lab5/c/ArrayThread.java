@@ -42,7 +42,6 @@ public class ArrayThread extends Thread {
 
     }
 
-    // Підрахування власне суми
     private int calculateSum() {
         int sum = 0;
         for (int i1 : array)
@@ -50,22 +49,18 @@ public class ArrayThread extends Thread {
         return sum;
     }
 
-    // Встановлення нової дії
     public void setNextAction(Action nextAction) {
         this.nextAction = nextAction;
     }
 
-    // Встановлення нової суми
     synchronized private void setCurrentSum(int currentSum) {
         this.currentSum = currentSum;
     }
 
-    // Повертає поточну суму
     synchronized public int getCurrentSum() {
         return currentSum;
     }
 
-    // Виконання обраної дії
     private void applyAction() {
         if (nextAction.equals(Action.DECREMENT))
             this.decrement();

@@ -14,7 +14,6 @@ public class BarrierAction implements Runnable {
         int mean = this.calculateMean();
         System.out.printf("Середнє значення: %d\n", mean);
 
-        // Якщо було досягнуто середнє (спільне) значення
         if (this.checkIfEnd(mean)) {
             this.interruptAll();
             System.out.println("Бар'єр завершив свою роботу!");
@@ -26,13 +25,11 @@ public class BarrierAction implements Runnable {
 
     }
 
-    // Переривання роботи усіх потоків
     private void interruptAll() {
         for (ArrayThread thread : threads)
             thread.interrupt();
     }
 
-    // Перевірка умови досягнення спільного значення
     private boolean checkIfEnd(int mean) {
         for (ArrayThread thread : threads)
             if (mean != thread.getCurrentSum())
@@ -40,7 +37,6 @@ public class BarrierAction implements Runnable {
         return true;
     }
 
-    // Підрахунок суми та середнього значення елементів масиву
     private int calculateMean() {
         int sum = 0;
         for (ArrayThread thread : threads)
@@ -48,7 +44,6 @@ public class BarrierAction implements Runnable {
         return sum / threads.size();
     }
 
-    // Встановлення типу дій на елементами масивів
     private void setActions(int mean) {
         for (ArrayThread thread : threads) {
             if (mean > thread.getCurrentSum())
