@@ -4,21 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-// Одна з качок, що літає по ігровому полю
 public class Duck extends Thread {
-    // Положення качки
     int x;
     int y;
 
-    // Швидкість руху качки в обох напрямках
     private int speedX;
     private int speedY;
 
-    // Розміри території, по якій качка може рухатись
     private int skyWidth;
     private int skyHeight;
 
-    // Розміри качки
     int labelWidth = 200;
     int labelHeight = 200;
 
@@ -34,9 +29,7 @@ public class Duck extends Thread {
         this.skyHeight = height - 350;
         this.panel = panel;
 
-        // Качки випадково генеруються, рухаються по полю та зникають при досягненні певної точки, чи якщо в них влучили
         if (random.nextInt() % 2 == 0) {
-            // Качка летить вліво
             duck = new JLabel(duckLeft);
             duck.setSize(new Dimension(labelWidth, labelHeight));
             int type = random.nextInt(3);
@@ -53,7 +46,6 @@ public class Duck extends Thread {
             speedX = Math.abs(random.nextInt(5)) + 1;
         }
 
-        // Качка летить вправо
         else {
             duck = new JLabel(duckRight);
             duck.setSize(new Dimension(labelWidth, labelHeight));
@@ -71,13 +63,11 @@ public class Duck extends Thread {
             speedX = -Math.abs(random.nextInt(5)) - 1;
         }
 
-        // Швидкість качки за випадково заданим напрямком
         if (y > skyHeight / 2)
             speedY = -Math.abs(random.nextInt(4)) - 1;
         else speedY = Math.abs(random.nextInt(4)) + 1;
     }
 
-    // Качка летить, поки не покине дозволені межі або поки в неї не влучать
     @Override
     public void run() {
         panel.add(duck);

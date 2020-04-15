@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-// Мисливець стріляє горизонтально вгору
 public class Hunter extends Thread {
     private JLabel hunterLabel;
     private GamePanel panel;
@@ -14,21 +13,17 @@ public class Hunter extends Thread {
     private int labelWidth = 118;
     private int labelHeight = 215;
 
-    // Мисливець може бути повернутим вправо або вліво
     private ImageIcon hunterRight = new ImageIcon("src/Lab7/resources/hunterLR.png");
     private ImageIcon hunterLeft = new ImageIcon("src/Lab7/resources/hunterRL.png");
 
-    // Вибір сторони повороту мисливця
     private int side = 1;
 
-    // Відхилення мисливця з кожним його кроком
     private int dx = 20;
 
     private int panelWidth;
     private volatile int countBullet = 0;
     private Hunter hunter = this;
 
-    // Напрямок руху мисливця
     private boolean keyLeft = false;
     private boolean keyRight = false;
 
@@ -50,13 +45,11 @@ public class Hunter extends Thread {
         countBullet += num;
     }
 
-    // Обробка подій, пов'язаних з мисливцем
     public class HunterKeyListener implements KeyListener {
         @Override
         public void keyTyped(KeyEvent e) {
         }
 
-        // Обробка натиснення на клавіші пострілу чи руху (зміна напрямку мисливця)
         @Override
         public void keyPressed(KeyEvent e) {
             if (panel != null)
@@ -100,7 +93,6 @@ public class Hunter extends Thread {
         }
     }
 
-    // Переміщення мисливця
     @Override
     public void run() {
         while (!isInterrupted()) {

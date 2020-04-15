@@ -3,7 +3,6 @@ package Lab7.src;
 import javax.swing.*;
 import java.awt.*;
 
-// Опис вікна програми
 public class MainFrame extends JFrame {
     MainFrame(String title) {
         super(title);

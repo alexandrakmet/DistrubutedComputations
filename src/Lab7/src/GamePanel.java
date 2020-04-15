@@ -6,9 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-// Ігрове поле
 public class GamePanel extends JPanel {
-    // Розміри поля
     int width;
     int height;
 
@@ -38,7 +36,6 @@ public class GamePanel extends JPanel {
         game.start();
     }
 
-    // Симуляція процесу гри
     class Game extends Thread {
         @Override
         public void run() {
@@ -47,7 +44,6 @@ public class GamePanel extends JPanel {
                 hunter.start();
             }
 
-            // Баланс кількості качок
             while (!isInterrupted()) {
                 if (ducks.size() < maxDucks) {
                     Duck duck = new Duck(width, height, panel);
@@ -62,7 +58,6 @@ public class GamePanel extends JPanel {
         }
     }
 
-    // Обробка натиснення на качку
     class GameMouseAdapter extends MouseAdapter {
         @Override
         public void mouseReleased(MouseEvent e) {

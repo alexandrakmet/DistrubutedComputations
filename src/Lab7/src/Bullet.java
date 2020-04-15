@@ -3,16 +3,12 @@ package Lab7.src;
 import javax.swing.*;
 import java.awt.*;
 
-// Куля, яку випускає мисливець
 public class Bullet extends Thread {
-    // Положення кулі на полі
     private int x;
     private int y;
 
-    // Відхилення кулі при її русі вгору
     private int dy = 10;
 
-    // Розміри кулі
     private int labelWidth = 14;
     private int labelHeight = 37;
 
@@ -30,7 +26,6 @@ public class Bullet extends Thread {
         bulletLabel.setLocation(x - labelWidth / 2, y - labelHeight / 2);
     }
 
-    // Куля вилітає із рушниці
     @Override
     public void run() {
         hunter.addBullet(1);
@@ -40,7 +35,7 @@ public class Bullet extends Thread {
                 break;
             y -= dy;
             bulletLabel.setLocation(x - labelWidth / 2, y - labelHeight / 2);
-            // Куля влучила
+
             for (Duck duck : panel.ducks)
                 if (x > duck.x && x < duck.x + duck.labelWidth && y > duck.y && y < duck.y + duck.labelHeight) {
                     duck.interrupt();
