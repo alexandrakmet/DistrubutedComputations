@@ -1,0 +1,14 @@
+F:\ВУЗ 3 курс\RO\Lab9\5\5\bin\Debug\5.exe.config
+F:\ВУЗ 3 курс\RO\Lab9\5\5\bin\Debug\5.exe
+F:\ВУЗ 3 курс\RO\Lab9\5\5\bin\Debug\5.pdb
+F:\ВУЗ 3 курс\RO\Lab9\5\5\obj\Debug\5.csprojAssemblyReference.cache
+F:\ВУЗ 3 курс\RO\Lab9\5\5\obj\Debug\5.csproj.CoreCompileInputs.cache
+F:\ВУЗ 3 курс\RO\Lab9\5\5\obj\Debug\5.exe
+F:\ВУЗ 3 курс\RO\Lab9\5\5\obj\Debug\5.pdb
+D:\Университет\III курс\Розподілені обчислення\Labs\Module1\Lab9\5\5\bin\Debug\5.exe.config
+D:\Университет\III курс\Розподілені обчислення\Labs\Module1\Lab9\5\5\bin\Debug\5.exe
+D:\Университет\III курс\Розподілені обчислення\Labs\Module1\Lab9\5\5\bin\Debug\5.pdb
+D:\Университет\III курс\Розподілені обчислення\Labs\Module1\Lab9\5\5\obj\Debug\5.csprojAssemblyReference.cache
+D:\Университет\III курс\Розподілені обчислення\Labs\Module1\Lab9\5\5\obj\Debug\5.csproj.CoreCompileInputs.cache
+D:\Университет\III курс\Розподілені обчислення\Labs\Module1\Lab9\5\5\obj\Debug\5.exe
+D:\Университет\III курс\Розподілені обчислення\Labs\Module1\Lab9\5\5\obj\Debug\5.pdb
